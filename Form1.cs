@@ -54,7 +54,7 @@ namespace Shapes
             if (Validation())
             {
                 double thePerimeter = myrectangle.GetPerimeter(number1, number2);
-                MessageBox.Show("محیط مستطیل موردنظر شما = " + thePerimeter);
+                MessageBox.Show("محیط مستطیل مورد نظر شما = " + thePerimeter);
             }
         }
 
@@ -76,6 +76,86 @@ namespace Shapes
                 }
             }
             return itsValid;
+        }
+
+        private void BtnAreaR_Click(object sender, EventArgs e)
+        {
+            number1 = (double)txtLength.Value;
+            number2 = (double)txtWidth.Value;
+            if (Validation())
+            {
+                double theArea = myrectangle.GetArea(number1, number2);
+                MessageBox.Show("مساحت مستطیل مورد نظر شما = " + theArea);
+            }
+            
+        }
+
+        private void BtnPerimeterS_Click(object sender, EventArgs e)
+        {
+            number1 = number2 = (double)txtSide.Value;
+            if (Validation())
+            {
+                double thePerimeter = myrectangle.GetPerimeter(number1,number2);
+                MessageBox.Show("محیط مربع مورد نظر شما = " + thePerimeter);
+            }
+        }
+
+        private void BtnAreaS_Click(object sender, EventArgs e)
+        {
+            number1 = number2 = (double)txtSide.Value;
+            if(Validation())
+            {
+                double theArea = myrectangle.GetArea(number1, number2);
+                MessageBox.Show("مساحت مربع مورد نظر شما = " + theArea);
+            }
+            
+        }
+
+        private void BtnPerimeterC_Click(object sender, EventArgs e)
+        {
+            number1 = 1;
+            number2 = (double)txtRadius.Value;
+            if(Validation())
+            {
+                double thePerimeter = mycircle.GetPerimeter(number1, number2);
+                MessageBox.Show("محیط دایره ی مورد نظر شما = " + thePerimeter);
+            }
+            
+
+
+        }
+
+        private void BtnAreaC_Click(object sender, EventArgs e)
+        {
+            number1 = 1;
+            number2 = (double)txtRadius.Value;
+            if(Validation())
+            {
+                double theArea = mycircle.GetArea(number1, number2);
+                MessageBox.Show("مساحت دایره ی مورد نظر شما = " + theArea);
+            }
+        }
+
+        private void BtnPerimeterT_Click(object sender, EventArgs e)
+        {
+            number1 = (double)txtBase.Value;
+            number2 = (double)txtHeight.Value;
+            if(Validation())
+            {
+                double thePerimeter = mytriangle.GetPerimeter(number1, number2);
+                MessageBox.Show("محیط مثلث قایم الزاویه ی مورد نظر شما = " + thePerimeter);
+            }
+        }
+
+        private void BtnAreaT_Click(object sender, EventArgs e)
+        {
+            number1 = (double)txtBase.Value;
+            number2 = (double)txtHeight.Value;
+            if(Validation())
+            {
+                double theArea = mytriangle.GetArea(number1, number2);
+                MessageBox.Show("مساحت مثلث قایم الزاویه ی مورد نظر شما = " + theArea);
+            }
         }
     }
 }
